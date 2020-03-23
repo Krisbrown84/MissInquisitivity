@@ -1,0 +1,273 @@
+/*The container will also serve as the SKY*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*To hide the horizontal scroller appearing during the animation*/
+    overflow: hidden;
+}
+
+#clouds {
+    position: relative;
+    padding: 100px 0;
+    background: #c9dbe9;
+    background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+    width: 200px;
+    height: 60px;
+    background: #fff;
+
+    border-radius: 200px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+
+    position: relative;
+}
+
+.cloud:before,
+.cloud:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+    width: 120px;
+    height: 120px;
+    top: -55px;
+    left: auto;
+    right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+    -webkit-animation: moveclouds 15s linear infinite;
+    -moz-animation: moveclouds 15s linear infinite;
+    -o-animation: moveclouds 15s linear infinite;
+    animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+    left: 200px;
+
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.6;
+    /*opacity proportional to the size*/
+
+    /*Speed will also be proportional to the size and opacity*/
+    /*More the speed. Less the time in 's' = seconds*/
+    -webkit-animation: moveclouds 25s linear infinite;
+    -moz-animation: moveclouds 25s linear infinite;
+    -o-animation: moveclouds 25s linear infinite;
+    animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+    left: -250px;
+    top: -200px;
+
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+
+    -webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+    -o-animation: moveclouds 20s linear infinite;
+    animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+    left: 470px;
+    top: -250px;
+
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.75;
+    /*opacity proportional to the size*/
+
+    -webkit-animation: moveclouds 18s linear infinite;
+    -moz-animation: moveclouds 18s linear infinite;
+    -o-animation: moveclouds 18s linear infinite;
+    animation: moveclouds 18s linear infinite
+}
+
+.x5 {
+    left: -150px;
+    top: -150px;
+
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+
+    -webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+    -o-animation: moveclouds 20s linear infinite;
+    animation: moveclouds 20s linear infinite
+}
+
+@-webkit-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+@-moz-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+@-o-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+@keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333; */
+    background-image: url(./Images/images.jfif);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-family: 'Gochi Hand', cursive;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: white;
+}
+
+#title {
+    background-image: url(./Images/480208815\ Childrens\ Silhouettes_0.jpg);
+    padding: 50px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 50px;
+    color: black;
+
+}
+
+#strapline {
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#me {
+    text-align: center;
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 25px;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Gochi Hand', cursive;
+}
+
+#icon {
+    size: 75px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+#email {
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    font-size: larger;
+}
+
+.vertical-menu {
+    position: absolute;
+    width: 200px; /* Set a width if you like */
+
+}
+  
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    font-weight: bold;
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+  
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+  
+.vertical-menu a.active {
+    background-color: skyblue; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
